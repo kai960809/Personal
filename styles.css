@@ -117,12 +117,39 @@ h3{margin:0 0 1.5rem;font-size:1.75rem;font-weight:700}
 .project .thumb{height:140px;border-radius:8px;margin-bottom:1rem;background:linear-gradient(135deg,#7dd3fc,#60a5fa)}
 .project h4{margin:0 0 0.5rem;font-size:1.1rem}
 .project p{color:var(--muted);font-size:0.9rem;line-height:1.5}
-.link{color:var(--accent-light);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;transition:all 200ms ease}
-.link:hover{color:white;text-decoration:underline}
-.contact-form{display:grid;gap:1rem;max-width:600px}
-.contact-form label{display:block;font-weight:500;margin-bottom:0.25rem;color:var(--text)}
-.contact-form input,.contact-form textarea{width:100%;padding:0.75rem;border-radius:8px;border:1px solid rgba(59,130,246,0.2);background:rgba(26,31,58,0.5);color:inherit;font-family:inherit;transition:all 200ms ease}
-.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent-light);box-shadow:0 0 0 3px rgba(59,130,246,0.1);background:rgba(26,31,58,0.8)}
+.link{color:var(--accent-light);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;transition:all 200ms ease;position:relative}
+.link:hover{color:#fff;text-decoration:none}
+.link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light));transition:width 200ms ease}
+.link:hover::after{width:100%}
+.contact-form{display:grid;gap:1rem;max-width:600px;animation:slideInUp 0.6s ease-out}
+.contact-form label{display:block;font-weight:500;margin-bottom:0.25rem;color:var(--text);font-size:1rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.75rem;border-radius:8px;border:1.5px solid rgba(59,130,246,0.25);background:rgba(26,31,58,0.6);color:inherit;font-family:inherit;transition:all 250ms ease}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(232,238,248,0.3)}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent-light);box-shadow:0 0 0 4px rgba(96,165,250,0.15);background:rgba(26,31,58,0.9);transform:translateY(-2px)}
+@keyframes slideInUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeInScale{
+  from{
+    opacity:0;
+    transform:scale(0.85) translateY(40px);
+    filter:blur(4px)
+  }
+  to{
+    opacity:1;
+    transform:scale(1) translateY(0);
+    filter:blur(0)
+  }
+}
+section{animation:fadeInScale 0.8s ease-out forwards;opacity:0}
+.project{animation:fadeInScale 0.8s ease-out forwards;opacity:0}
+.skill{animation:fadeInScale 0.7s ease-out forwards;opacity:0}
+.timeline .item{animation:fadeInScale 0.8s ease-out forwards;opacity:0}
+.fade-in-scale{
+  animation:fadeInScale 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+  animation-fill-mode:both
+}
 .form-actions{display:flex;gap:0.75rem;margin-top:1rem}
 .site-footer{padding:1.5rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.05);text-align:center}
 .muted{color:var(--muted)}
@@ -172,7 +199,7 @@ h3{margin:0 0 1.5rem;font-size:1.75rem;font-weight:700}
   
   .contact-form{gap:0.75rem}
   .contact-form label{font-size:0.9rem}
-  .contact-form input,.contact-form textarea{padding:0.6rem;font-size:0.95rem}
+  .contact-form input,.contact-form textarea{padding:0.6rem;font-size:0.95rem;border:1.5px solid rgba(59,130,246,0.25)}
   .form-actions{gap:0.5rem;flex-direction:column}
   .btn{width:100%;text-align:center}
 }
