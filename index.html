@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>陳麒元 — 大學學生</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>陳麒元</h1>
+        <p class="muted">大學學生</p>
+      </div>
+      <nav class="nav">
+        <a href="#about">關於我</a>
+        <a href="#skills">技能</a>
+        <a href="#experience">經歷</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>你好，我是 陳麒元</h2>
+          <p>專注於建立快速、可用及易維護的網頁體驗。熱愛設計與工程的交會。</p>
+          <div class="cta">
+            <a class="btn" href="#contact">聯絡我</a>
+            <a class="btn ghost" href="#portfolio">作品集</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="avatar" aria-hidden="true"></div>
+          <ul class="meta">
+            <li><strong>所在地</strong> 台灣</li>
+            <li><strong>經驗</strong> 5 年</li>
+            <li><strong>專長</strong> React, TypeScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">git clone https://github.com/kai960809/Personal-resume-web-page.git
+# 進入專案目錄
+cd Personal-resume-web-page
+      <div class="container">
+        <h3>關於我</h3>
+        <p>我是專注於前端開發與使用者體驗的工程師。擅長將設計系統落地、優化效能，並與產品／設計團隊合作將想法實作成可量產的產品。</p>
+      </div>
+    </section>
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h3>技能</h3>
+        <div class="skills-grid">
+          <div class="skill">籃球</div>
+          <div class="skill">廣東話</div>
+          <div class="skill">上低音號</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h3>經歷</h3>
+        <div class="timeline">
+          <div class="item">
+            <div class="period">2019 — 2022</div>
+            <div class="body">
+              <h4>就讀 竹圍高中</h4>
+              <p>在竹圍高中完成高中階段學業，建立扎實的學習基礎。期間積極參與校內活動與社團，鍛鍊團隊合作與時間管理能力，為後續學習打下良好基礎。</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="period">2022 — 2025</div>
+            <div class="body">
+              <h4>就讀 中崙高中</h4>
+              <p>於中崙高中深化學科與實作經驗，參與跨領域專題與學習活動，強化問題分析與溝通技巧，並開始將興趣延伸至設計與技術實作。</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="period">2025 — 現在</div>
+            <div class="body">
+              <h4>就讀 輔仁大學</h4>
+              <p>目前在輔仁大學就讀，持續修習相關課程並參與實作專案，將興趣逐步轉化為具體技能與作品，並積極尋找實習與合作機會以擴展經驗。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h3>作品集</h3>
+        <div class="projects">
+          <article class="project">
+            <div class="thumb" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
+            <h4>專案名稱 A</h4>
+            <p>簡短敘述：一個響應式網站，使用 React 與 TypeScript。</p>
+            <a class="link" href="#">查看專案</a>
+          </article>
+          <article class="project">
+            <div class="thumb" style="background:linear-gradient(135deg,#fbcfe8,#fda4af)"></div>
+            <h4>專案名稱 B</h4>
+            <p>簡短敘述：設計系統與元件庫的實作經驗。</p>
+            <a class="link" href="#">查看專案</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>聯絡方式</h3>
+        <p>希望合作或聊聊？請填寫下方表單或直接寄信到 <a href="mailto:414570590@m365.fju.edu.tw">414570590@m365.fju.edu.tw</a></p>
+        <form id="contactForm" class="contact-form">
+          <label>姓名<input type="text" name="name" required></label>
+          <label>電子郵件<input type="email" name="email" required></label>
+          <label>訊息<textarea name="message" rows="4" required></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn">寄出</button>
+            <button type="reset" class="btn ghost">清除</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2025 陳麒元 — 版權所有</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
