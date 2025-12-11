@@ -1,0 +1,20 @@
+.calendar-app{display:grid;grid-template-columns:1fr 280px;gap:1rem;align-items:start}
+.calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem}
+.month-year{font-weight:700;font-size:1.15rem}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:0.5rem}
+.calendar-grid .day{min-height:80px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.02);cursor:pointer}
+.calendar-grid .day .num{font-weight:600}
+.calendar-grid .day.other{opacity:0.35}
+.calendar-grid .day.today{box-shadow:0 8px 30px rgba(59,130,246,0.08);border-color:rgba(96,165,250,0.25)}
+.calendar-grid .weekday{font-size:0.85rem;color:var(--muted);text-align:center;padding:0.25rem}
+.calendar-side{background:linear-gradient(135deg, rgba(26,31,58,0.6), rgba(26,31,58,0.4));padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.calendar-side h4{margin:0 0 0.5rem}
+#eventsList{list-style:none;padding:0;margin:0}
+#eventsList li{padding:0.5rem;border-bottom:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+.event-title{color:var(--text)}
+.event-delete{background:transparent;border:none;color:var(--muted);cursor:pointer}
+
+@media (max-width:900px){
+  .calendar-app{grid-template-columns:1fr}
+  .calendar-side{order:2}
+}
