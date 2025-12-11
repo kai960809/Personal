@@ -1,0 +1,21 @@
+.calc-container{max-width:420px;margin:0 auto}
+.calculator{background:linear-gradient(135deg, rgba(26,31,58,0.8), rgba(26,31,58,0.6));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 12px 40px rgba(59,130,246,0.08)}
+.display{background:rgba(255,255,255,0.03);padding:1rem;border-radius:8px;font-size:2rem;text-align:right;color:var(--text);min-height:56px;display:flex;align-items:center;justify-content:flex-end;margin-bottom:0.75rem;padding-right:1rem}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem}
+.key{padding:0.8rem 0.75rem;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:var(--text);font-size:1rem;font-weight:600;cursor:pointer;transition:all 160ms ease}
+.key:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(59,130,246,0.08)}
+.key--wide{grid-column:span 2}
+.key--tall{grid-row:span 2;background:linear-gradient(135deg,var(--accent),var(--accent-light));color:#fff}
+.key--zero{grid-column:span 2}
+
+@media (max-width:480px){
+  .display{font-size:1.5rem;min-height:48px}
+  .key{padding:0.6rem}
+}
+
+.history{margin-top:1rem;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:0.75rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.history h4{margin:0 0 0.5rem;font-size:1rem;color:var(--accent-light)}
+.history ul{list-style:none;padding:0;margin:0;max-height:160px;overflow:auto}
+.history li{padding:0.5rem;border-bottom:1px solid rgba(255,255,255,0.02);color:var(--muted);cursor:pointer}
+.history li:hover{background:rgba(96,165,250,0.03);color:var(--text)}
+

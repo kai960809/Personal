@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>計算機 — 專案一</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>計算機</h1>
+        <p class="muted">專案一</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">回到首頁</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>計算機</h3>
+        <div class="calc-container">
+          <div class="calculator" id="calculator">
+            <div class="display" id="display">0</div>
+            <div class="keys">
+              <button data-action="clear" class="key">C</button>
+              <button data-action="backspace" class="key">⌫</button>
+              <button data-action="percent" class="key">%</button>
+              <button data-action="operator" data-op="/" class="key">÷</button>
+
+              <button data-action="paren" data-paren="(" class="key">(</button>
+              <button data-action="paren" data-paren=")" class="key">)</button>
+              <button data-action="plusminus" class="key">±</button>
+              <button data-action="operator" data-op="*" class="key">×</button>
+
+              <button class="key">7</button>
+              <button class="key">8</button>
+              <button class="key">9</button>
+              <button data-action="operator" data-op="-" class="key">−</button>
+
+              <button class="key">4</button>
+              <button class="key">5</button>
+              <button class="key">6</button>
+              <button data-action="operator" data-op="+" class="key">+</button>
+
+              <button class="key">1</button>
+              <button class="key">2</button>
+              <button class="key">3</button>
+              <button data-action="equals" class="key key--tall">=</button>
+
+              <button class="key key--zero">0</button>
+              <button class="key">.</button>
+            </div>
+            <div class="history" id="history">
+              <h4>歷史紀錄</h4>
+              <ul id="historyList"></ul>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:1rem">支援鍵盤輸入（數字、.+-*/、Enter、Esc）。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2025 計算機專案</p>
+    </div>
+  </footer>
+
+  <script src="calculator.js"></script>
+</body>
+</html>

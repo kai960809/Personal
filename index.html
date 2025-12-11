@@ -101,16 +101,22 @@
         <h3>作品集</h3>
         <div class="projects">
           <article class="project">
-            <div class="thumb" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
-            <h4>專案名稱 A</h4>
-            <p>簡短敘述：一個響應式網站，使用 React 與 TypeScript。</p>
-            <a class="link" href="#">查看專案</a>
+            <div class="thumb" style="background:linear-gradient(135deg,#fef08a,#fca5a5)"></div>
+            <h4>專案一：計算機</h4>
+            <p>簡單的四則運算計算機（支援小數、清除與鍵盤輸入）。</p>
+            <a class="link" href="project1/calculator.html">查看專案</a>
           </article>
           <article class="project">
-            <div class="thumb" style="background:linear-gradient(135deg,#fbcfe8,#fda4af)"></div>
-            <h4>專案名稱 B</h4>
-            <p>簡短敘述：設計系統與元件庫的實作經驗。</p>
-            <a class="link" href="#">查看專案</a>
+            <div class="thumb" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
+            <h4>專案二：日曆網站</h4>
+            <p>簡短敘述：月曆檢視與事件管理（新增/刪除，會儲存在 localStorage）。</p>
+            <a class="link" href="project2/calendar.html">查看專案</a>
+          </article>
+          <article class="project">
+            <div class="thumb"><img src="computer.jpg" alt="第一次自己組裝電腦"></div>
+            <h4>專案三：設計系統範例</h4>
+            <p>展示按鈕、輸入、色票與元件樣式的設計系統範例，包含互動預覽與複製色票功能。<br><strong>第一次自己組裝電腦</strong></p>
+            <a class="link" href="#" id="openProject3">查看專案</a>
           </article>
         </div>
       </div>
@@ -138,6 +144,15 @@
       <p class="muted">© 2025 陳麒元 — 版權所有</p>
     </div>
   </footer>
+
+  <!-- Lightbox for 專案三 -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div id="lightboxBackdrop" class="lightbox-backdrop"></div>
+    <div class="lightbox-inner">
+      <button id="lightboxClose" class="lightbox-close" aria-label="關閉">×</button>
+      <img id="lightboxImage" src="computer.jpg" alt="第一次自己組裝電腦">
+    </div>
+  </div>
 
   <script src="script.js"></script>
   <script>
@@ -173,6 +188,20 @@
     document.querySelectorAll('section, .project, .skill, .timeline .item').forEach(el => {
       observer.observe(el);
     });
+
+    // Lightbox for project3 image preview
+    (function(){
+      const openBtn = document.getElementById('openProject3');
+      const lightbox = document.getElementById('lightbox');
+      const closeBtn = document.getElementById('lightboxClose');
+      const backdrop = document.getElementById('lightboxBackdrop');
+      function show(){ if(!lightbox) return; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+      function hide(){ if(!lightbox) return; lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
+      if(openBtn) openBtn.addEventListener('click', (e)=>{ e.preventDefault(); show(); });
+      if(closeBtn) closeBtn.addEventListener('click', hide);
+      if(backdrop) backdrop.addEventListener('click', hide);
+      window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') hide(); });
+    })();
   </script>
 </body>
 </html>

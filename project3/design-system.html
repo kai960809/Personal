@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>設計系統範例 — 專案三</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>設計系統範例</h1>
+        <p class="muted">專案三</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">回到首頁</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>元件預覽</h3>
+        <div class="ds-grid">
+          <div class="ds-panel">
+            <h4>按鈕</h4>
+            <div class="ds-row">
+              <button class="btn">主要按鈕</button>
+              <button class="btn ghost">次要按鈕</button>
+              <button class="btn" disabled>停用</button>
+            </div>
+          </div>
+
+          <div class="ds-panel">
+            <h4>輸入</h4>
+            <div class="ds-row">
+              <label>文字輸入 <input placeholder="輸入文字"></label>
+              <label>數字輸入 <input type="number" placeholder="123"></label>
+            </div>
+          </div>
+
+          <div class="ds-panel">
+            <h4>色票</h4>
+            <div class="colors" id="colors">
+              <div class="token" data-token="--accent">Accent <span class="swatch" style="background:var(--accent)"></span></div>
+              <div class="token" data-token="--accent-light">Accent Light <span class="swatch" style="background:var(--accent-light)"></span></div>
+              <div class="token" data-token="--card">Card <span class="swatch" style="background:var(--card)"></span></div>
+              <div class="token" data-token="--bg">Background <span class="swatch" style="background:var(--bg)"></span></div>
+            </div>
+            <p class="muted">點擊色票可複製變數名稱到剪貼簿。</p>
+          </div>
+
+          <div class="ds-panel">
+            <h4>切換主題</h4>
+            <div class="ds-row">
+              <button id="toggleTheme" class="btn ghost">切換深淺</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2025 設計系統範例</p>
+    </div>
+  </footer>
+
+  <script src="design-system.js"></script>
+</body>
+</html>

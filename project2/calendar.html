@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>日曆 — 專案二</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>日曆</h1>
+        <p class="muted">專案二</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">回到首頁</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>日曆網站</h3>
+        <div class="calendar-app">
+          <div class="calendar-header">
+            <button id="prevMonth" class="btn ghost">‹</button>
+            <div class="month-year" id="monthYear"></div>
+            <button id="nextMonth" class="btn ghost">›</button>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+          <div class="calendar-side">
+            <h4>選取日期事件</h4>
+            <div id="selectedDate" class="muted">尚未選取</div>
+            <ul id="eventsList"></ul>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:1rem">點擊日期以新增事件；事件會儲存在瀏覽器 localStorage。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2025 日曆專案</p>
+    </div>
+  </footer>
+
+  <script src="calendar.js"></script>
+</body>
+</html>
