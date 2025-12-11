@@ -1,0 +1,6 @@
+﻿{
+  "title": "Feature: UI enhancements  avatar, responsive layout, animations",
+  "head": "feature/ui-enhancements",
+  "base": "main",
+  "body": "這個 PR 提升個人網站的使用者介面與行動體驗。\n\n主要更改：\n- 新增 avatar.jpg 並在 index.html 使用 <img>\n- 更新 viewport meta（viewport-fit=cover）\n- 優化 styles.css（配色、排版、動畫）\n- 加入滑動入場動畫與平滑導航\n- 新增聯絡電話連結\n\n請在本地檢視後合併。"
+}
