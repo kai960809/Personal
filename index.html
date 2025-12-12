@@ -51,16 +51,39 @@
     <section id="about" class="section">
         <div class="container">
         <h3>關於我</h3>
-        <p>目前剛開始接觸程式設計，以前並無相關經驗，希望未來可以在輔仁大學學到更多的程式設計相關知識，也希望可以認識更多朋友</p>
+        <p>目前剛開始接觸程式設計，以前並無相關經驗，同時也有在學習健身希望未來可以在輔仁大學學到更多的多元向的相關知識，也希望可以認識更多人。</p>
       </div>
     </section>
     <section id="skills" class="section alt">
       <div class="container">
         <h3>技能</h3>
-        <div class="skills-grid">
-          <div class="skill">籃球</div>
-          <div class="skill">廣東話</div>
-          <div class="skill">上低音號</div>
+          <div class="skills-controls">
+          <button class="btn small active" data-view="progress">熟練度</button>
+          <button class="btn small ghost" data-view="cloud">標籤雲</button>
+        </div>
+
+        <div class="skills-views">
+          <ul class="skills-progress" aria-hidden="false">
+            <li class="skill-item" data-skill="JavaScript" data-percent="20"><span class="skill-name">JavaScript</span><span class="skill-percent">20%</span>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </li>
+            <li class="skill-item" data-skill="籃球" data-percent="80"><span class="skill-name">籃球</span><span class="skill-percent">80%</span>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </li>
+            <li class="skill-item" data-skill="廣東話" data-percent="95"><span class="skill-name">廣東話</span><span class="skill-percent">95%</span>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </li>
+            <li class="skill-item" data-skill="上低音號" data-percent="70"><span class="skill-name">上低音號</span><span class="skill-percent">70%</span>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </li>
+          </ul>
+
+          <div class="skills-cloud" aria-hidden="true">
+            <div class="skill" data-level="1">JavaScript</div>
+            <div class="skill" data-level="4">籃球</div>
+            <div class="skill" data-level="4">廣東話</div>
+            <div class="skill" data-level="3">上低音號</div>
+          </div>
         </div>
       </div>
     </section>
@@ -184,8 +207,8 @@
       });
     }, observerOptions);
 
-    // 觀察所有 section、project、skill、timeline item
-    document.querySelectorAll('section, .project, .skill, .timeline .item').forEach(el => {
+    // 觀察所有 section、project、skill、skill-item、timeline item
+    document.querySelectorAll('section, .project, .skill, .skill-item, .timeline .item').forEach(el => {
       observer.observe(el);
     });
 
